@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0wvxi45yqeri"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_aqsqs"]
+[ext_resource type="PackedScene" uid="uid://bd1tbhankmbda" path="res://tile.tscn" id="1_molsj"]
+[ext_resource type="PackedScene" uid="uid://bp3xfkdimp6o6" path="res://player.tscn" id="2_k3y3h"]
+[ext_resource type="PackedScene" uid="uid://b6nkv74k3xll0" path="res://tile_detector.tscn" id="4_4cs27"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_aqsqs")
+
+[node name="tile1" parent="." instance=ExtResource("1_molsj")]
+position = Vector2(121, 342)
+
+[node name="player" parent="." groups=["player"] instance=ExtResource("2_k3y3h")]
+position = Vector2(124, -335)
+
+[node name="tile2" parent="." instance=ExtResource("1_molsj")]
+position = Vector2(365, 345)
+
+[node name="tile3" parent="." instance=ExtResource("1_molsj")]
+position = Vector2(605, 355)
+
+[node name="tile4" parent="." instance=ExtResource("1_molsj")]
+position = Vector2(847, 373)
+
+[node name="tile5" parent="." instance=ExtResource("1_molsj")]
+position = Vector2(1089, 420)
+
+[node name="tile6" parent="." instance=ExtResource("1_molsj")]
+position = Vector2(1335, 462)
+
+[node name="tile_detector" parent="." instance=ExtResource("4_4cs27")]
+position = Vector2(1300, 650)

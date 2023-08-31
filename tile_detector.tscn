@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6nkv74k3xll0"]
+
+[ext_resource type="Script" path="res://tile_detector.gd" id="1_4tbpw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8rsv"]
+size = Vector2(240, 172)
+
+[node name="Area2D" type="Area2D" groups=["detector"]]
+script = ExtResource("1_4tbpw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_f8rsv")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

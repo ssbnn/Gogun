@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bd1tbhankmbda"]
+
+[ext_resource type="Script" path="res://tile.gd" id="1_60jgl"]
+[ext_resource type="Texture2D" uid="uid://cevskhmk0vol8" path="res://asdf.png" id="2_0ywf6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5knbl"]
+size = Vector2(240, 172)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xldp"]
+size = Vector2(240, 172)
+
+[node name="tile" type="StaticBody2D" groups=["tile"]]
+scale = Vector2(1.0103, 0.990568)
+script = ExtResource("1_60jgl")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_5knbl")
+
+[node name="BlockSprite" type="Sprite2D" parent="."]
+scale = Vector2(1.00715, 1.09024)
+texture = ExtResource("2_0ywf6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3xldp")
+
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
