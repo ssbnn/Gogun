@@ -1,5 +1,7 @@
 extends Area2D
 
+signal empty_sign
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -10,7 +12,6 @@ func _process(delta):
 	pass
 
 
-
-
-func _on_body_exited(body):
-	print("body body body")
+func _on_area_exited(area):
+	print("area aerea")
+	emit_signal("empty_sign")

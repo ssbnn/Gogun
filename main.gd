@@ -12,6 +12,9 @@ var tile_timer = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	tile_timer = TILE_INTERVAL
+	# connect("empty_signal", self, "spawn_tile") 지금 문제가 tile이 생성되는 놈이라서 못받아들이는건가? 그래서 tile_detector를 만들었고
+	# 그 안에서 signal을 emit해야할것 같은데 어떻게 해야할지 모르겠음
+	# 일단 tile detector가 타일을 인식하기는 했음. 이제 그 시그널을 main에 잘 연결해서 해보자
 	print("hello world")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

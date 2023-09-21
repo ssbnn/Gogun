@@ -14,7 +14,6 @@ scale = Vector2(1.0103, 0.990568)
 script = ExtResource("1_60jgl")
 
 [node name="Area2D" type="Area2D" parent="."]
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_5knbl")
